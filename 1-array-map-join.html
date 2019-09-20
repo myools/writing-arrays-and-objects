@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to under the array map and join pattern to produce HTML on a page.
+
+    Predict the outcome of this code below and add comments that describe what is happening.
+
+    Can you change the contents of the items to count to 5 in german?
+  </pre>
+
+  <div class="content">
+    <h1>Page with a list</h1>
+    <main class="main">
+      <ul class="list"></ul>
+    </main>
+  </div>
+
+<script>
+  // create array of item strings
+  const items = ['eins', 'zwei', 'drei', 'vier', 'fünf'];
+
+// create function to turn item into `<li>` string
+  function getListItem(item) {
+    return '<li>List item ' + item + '!</li>';
+  }
+
+//  creates new array listItems combined into `<li>` element strings
+//  returns listItems into 1 single string
+  function getListItems() {
+    const listItems = items.map(getListItem);
+    return listItems.join('');
+  }
+
+  document.querySelector('.list').innerHTML = getListItems();
+</script>
+</body>
+</html>
